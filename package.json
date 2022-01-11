@@ -1,0 +1,20 @@
+{
+  "devDependencies": {
+    "clean-webpack-plugin": "^4.0.0",
+    "cross-env": "^7.0.3",
+    "css-loader": "^6.5.1",
+    "html-webpack-plugin": "^5.5.0",
+    "speed-measure-webpack-plugin": "^1.5.0",
+    "webpack": "^5.65.0",
+    "webpack-cli": "^4.9.1"
+  },
+  "scripts": {
+    "dev": "cross-env NODE_ENV=dev webpack serve --mode development",
+    "test": "cross-env NODE_ENV=test webpack  --mode development",
+    "build": "cross-env NODE_ENV=prod webpack  --mode development"
+  },
+  "dependencies": {
+    "global": "^4.4.0",
+    "webpack-dev-server": "^4.7.2"
+  }
+}
