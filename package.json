@@ -1,5 +1,7 @@
 {
   "devDependencies": {
+    "@babel/parser": "^7.16.8",
+    "@babel/traverse": "^7.16.8",
     "clean-webpack-plugin": "^4.0.0",
     "cross-env": "^7.0.3",
     "css-loader": "^6.5.1",
@@ -11,7 +13,8 @@
   "scripts": {
     "dev": "cross-env NODE_ENV=dev webpack serve --mode development",
     "test": "cross-env NODE_ENV=test webpack  --mode development",
-    "build": "cross-env NODE_ENV=prod webpack  --mode development"
+    "build": "cross-env NODE_ENV=prod webpack  --mode development",
+    "dev:webpack":"node ./owner-webpack/src/bundle.js"
   },
   "dependencies": {
     "global": "^4.4.0",
