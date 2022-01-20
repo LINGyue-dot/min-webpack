@@ -37,7 +37,7 @@ const config = {
 	},
 
 	resolve: {
-		module: [resolve("src"), "node_modules"], // 解析文件时候优先查找 src 下文件
+		modules: [resolve("src"), "node_modules"], // 解析文件时候优先查找 src 下文件
 		extensions: [".ts", ".js", ".ts", ".json"], // 自动添加后缀
 	},
 

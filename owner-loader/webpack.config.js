@@ -1,4 +1,5 @@
 const path = require("path");
+const PluginDemo = require("./pluginDemo");
 module.exports = {
 	mode: "development",
 	entry: {
@@ -12,6 +13,8 @@ module.exports = {
 		// loader路径查找顺序从左往右
 		modules: ["./node_modules", "./"],
 	},
+	plugins: [new PluginDemo()],
+
 	module: {
 		rules: [
 			{
