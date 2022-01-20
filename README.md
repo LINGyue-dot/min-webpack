@@ -52,6 +52,36 @@ ast 结点结构如下
 
 
 
+## loader
+
+### 同步 loader 函数
+可以借助 `loader-utils` 获取 loader 的 options
+
+```js
+const loaderUtils = require("loader-utils"); // loader-utils @2.0 才有 getOptions 方法
+module.exports = function (source) {
+	// this 包含需要可用函数以及配置
+  // 所以 loader 一定不能是箭头函数
+	const options = loaderUtils.getOptions(this); // 获取 webpack.config.js 的 loader 中的 options 数据
+
+	source += options.message;
+	this.callback(null, source);
+};
+
+```
+### 异步 loader 函数
+本质就是利用 `this.async()` 来获取可执行的异步返回函数
+
+```js
+module.exports = function (source) {
+	const asyncFn = this.async();
+	setTimeout(() => {
+		source += "hello";
+		asyncFn(null, source);
+	}, 200);
+};
+```
+
 
 # Refrence
 

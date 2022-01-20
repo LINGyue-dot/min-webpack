@@ -19,6 +19,7 @@
   "dependencies": {
     "@babel/core": "^7.16.7",
     "@babel/preset-env": "^7.16.8",
+    "git-cz": "^4.8.0",
     "global": "^4.4.0",
     "webpack-dev-server": "^4.7.2"
   }
